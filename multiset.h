@@ -10,12 +10,10 @@ struct Node
     Node * next;
 };
 
-
 template<typename type>
 class multiset
 {
-    Node<type> *head,*end;
-    int size;
+    Node<type> *head;
 public:
     multiset();
     void insert(type value);

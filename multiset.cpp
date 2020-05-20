@@ -4,7 +4,6 @@ template<typename type>
 multiset<type>::multiset()
 {
     head = NULL;
-    size=0;
 }
 
 template<typename type>
@@ -16,7 +15,6 @@ multiset<type>::~multiset()
         delete head;
         head = n;
     }
-    size=0;
 }
 
 template<typename type>
@@ -58,7 +56,6 @@ void multiset<type>::insert(type value)
             }
             n=n->next;
         }
-        size++;
     }
 }
 
@@ -173,7 +170,6 @@ multiset<type>::multiset(const multiset& cpy)
         n=n->next;
     }
     head=aux->next;
-    size=cpy.size;
 }
 
 
